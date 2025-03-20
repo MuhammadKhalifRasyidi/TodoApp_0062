@@ -43,6 +43,20 @@ class _TodoPageState extends State<TodoPage> {
     }
   }
 
+  void addData() {
+    if (selectedDate != null && namaController.text.isNotEmpty) {
+      setState(() {
+        daftarNama.add({
+          'nama': namaController.text,
+          'selesai': false,
+          'tanggal': selectedDate,
+        });
+        namaController.clear();
+        selectedDate = null;
+      });
+    }
+  }
+
   
   @override
   Widget build(BuildContext context) {
