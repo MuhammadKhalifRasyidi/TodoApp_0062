@@ -96,6 +96,27 @@ class _TodoPageState extends State<TodoPage> {
                   ),
                 ],
               ),
+              const SizedBox(height: 10),
+              Form(
+                key: key,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextFormField(
+                        controller: namaController,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter some text';
+                          }
+                          return null;
+                        },
+                       
+                      ),
+                    ),
+                   
+                  ],
+                ),
+              ),
               
             ],
           ),
