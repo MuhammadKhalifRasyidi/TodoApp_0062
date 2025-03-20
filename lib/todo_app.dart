@@ -11,7 +11,10 @@ class TodoPage extends StatefulWidget {
 class _TodoPageState extends State<TodoPage> {
   final TextEditingController namaController = TextEditingController();
   final key = GlobalKey<FormState>();
- 
+  List<Map<String, dynamic>> daftarNama = [];
+  String? selectedDate;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +30,20 @@ class _TodoPageState extends State<TodoPage> {
                   'Form Page',
                   style: TextStyle(fontSize: 24),
                 ),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Task Date:', style: TextStyle(fontSize: 16)),
+                      Text(selectedDate ?? 'Select a Date',
+                          style: const TextStyle(fontSize: 16)),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
