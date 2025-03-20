@@ -57,7 +57,12 @@ class _TodoPageState extends State<TodoPage> {
     }
   }
 
-  
+  void toggleStatus(int index) {
+    setState(() {
+      daftarNama[index]['selesai'] = !daftarNama[index]['selesai'];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
