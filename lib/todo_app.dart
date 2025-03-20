@@ -71,7 +71,10 @@ class _TodoPageState extends State<TodoPage> {
                           style: const TextStyle(fontSize: 16)),
                     ],
                   ),
-              
+                  IconButton(
+                    onPressed: pickDateTime,
+                    icon: const Icon(Icons.calendar_today),
+                  ),
                 ],
               ),
               
