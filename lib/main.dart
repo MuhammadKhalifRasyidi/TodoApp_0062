@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:progresspage/counter_page.dart';
 import 'package:progresspage/profile_page.dart';
+import 'package:progresspage/todo_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const ProfilePage(),
+      home: const TodoPage(),
       debugShowCheckedModeBanner: false,
     );
   }
