@@ -14,8 +14,36 @@ class _TodoPageState extends State<TodoPage> {
   List<Map<String, dynamic>> daftarNama = [];
   String? selectedDate;
 
+  Future<void> pickDateTime() async {
+    DateTime? pickedDate = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2101),
+    );
 
+    if (pickedDate != null) {
+      TimeOfDay? pickedTime = await showTimePicker(
+        context: context,
+        initialTime: TimeOfDay.now(),
+      );
 
+      if (pickedTime != null) {
+        DateTime finalDateTime = DateTime(
+          pickedDate.year,
+          pickedDate.month,
+          pickedDate.day,
+          pickedTime.hour,
+          pickedTime.minute,
+        );
+        setState(() {
+          selectedDate = DateFormat('dd-MM-yyyy HH:mm').format(finalDateTime);
+        });
+      }
+    }
+  }
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +71,10 @@ class _TodoPageState extends State<TodoPage> {
                           style: const TextStyle(fontSize: 16)),
                     ],
                   ),
+              
                 ],
               ),
+              
             ],
           ),
         ),
