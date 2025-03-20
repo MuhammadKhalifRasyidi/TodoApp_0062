@@ -148,7 +148,26 @@ class _TodoPageState extends State<TodoPage> {
                         color: Colors.grey[300], // Container tetap abu-abu
                         borderRadius: BorderRadius.circular(10.0),
                       ),
-                      
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                daftarNama[index]['nama'],
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  
+                                ),
+                              ),
+                              
+                            ],
+                          ),
+                          
+                        ],
+                      ),
                     );
                   },
                 ),
