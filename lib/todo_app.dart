@@ -164,7 +164,15 @@ class _TodoPageState extends State<TodoPage> {
                                       : TextDecoration.none,
                                 ),
                               ),
-                              
+                              Text('Tanggal: ${daftarNama[index]['tanggal']}'),
+                              Text(
+                                daftarNama[index]['selesai'] ? 'Done' : 'Not Done',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  
+                                ),
+                              ),
                             ],
                           ),
                           
