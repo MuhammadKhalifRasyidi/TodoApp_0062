@@ -170,7 +170,9 @@ class _TodoPageState extends State<TodoPage> {
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
-                                  
+                                  color: daftarNama[index]['selesai']
+                                      ? Colors.green
+                                      : Colors.red,
                                 ),
                               ),
                             ],
