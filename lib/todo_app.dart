@@ -159,7 +159,9 @@ class _TodoPageState extends State<TodoPage> {
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
-                                  
+                                  decoration: daftarNama[index]['selesai']
+                                      ? TextDecoration.lineThrough
+                                      : TextDecoration.none,
                                 ),
                               ),
                               
