@@ -177,7 +177,13 @@ class _TodoPageState extends State<TodoPage> {
                               ),
                             ],
                           ),
-                          
+                          Checkbox(
+                            value: daftarNama[index]['selesai'],
+                            onChanged: (value) {
+                              toggleStatus(index);
+                            },
+                            activeColor: Colors.grey, // Tetap abu-abu
+                          ),
                         ],
                       ),
                     );
