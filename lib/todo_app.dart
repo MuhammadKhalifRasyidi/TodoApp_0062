@@ -120,7 +120,15 @@ class _TodoPageState extends State<TodoPage> {
                         ),
                       ),
                     ),
-                   
+                    const SizedBox(width: 10),
+                    OutlinedButton(
+                      onPressed: () {
+                        if (key.currentState!.validate()) {
+                          addData();
+                        }
+                      },
+                      child: const Text('Submit'),
+                    ),
                   ],
                 ),
               ),
