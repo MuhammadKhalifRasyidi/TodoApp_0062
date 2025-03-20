@@ -110,7 +110,14 @@ class _TodoPageState extends State<TodoPage> {
                           }
                           return null;
                         },
-                       
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        decoration: InputDecoration(
+                          labelText: 'First Name',
+                          hintText: 'Enter your first name',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
                       ),
                     ),
                    
