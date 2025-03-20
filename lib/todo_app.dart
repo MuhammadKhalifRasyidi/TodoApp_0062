@@ -137,7 +137,22 @@ class _TodoPageState extends State<TodoPage> {
                 'List Task',
                 style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
               ),
-              
+              Expanded(
+                child: ListView.builder(
+                  itemCount: daftarNama.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300], // Container tetap abu-abu
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
